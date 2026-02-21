@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/icon.png" type="image/png">
+    <title>My Media Learning Page</title>
+</head>
+
+<body>
+    
+    <header>
+
+        <h1>My Media Learning Page</h1>
+
+        <p>This page is created to practice HTML media elements. <br>It includes video and audio content with proper structure and accessibility.</p>
+
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="#video">Video</a></li>
+                <li><a href="#audio">Audio</a></li>
+                <li><a href="#contact-info">Contact Information</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section id="video">
+
+            <h2>Learning Video</h2>
+
+            <p>This video is part of my HTML learning journey. <br>It demonstrates how video content can be embedded on a webpage.</p>
+
+            <!-- FALL BACK MESSAGE
+              Your browser does not support the video tag.
+               Your browser does not support the audio element. -->
+
+          <video controls poster="../assets/poster.jpg" width="400">
+            <source src="../assets/video.mp4" type="video/mp4">
+            <track 
+                src="../assets/captions.vtt"
+                kind="subtitles"
+                srclang="en"
+                label="English"
+                default>
+            Your browser does not support the video tag.
+          </video>  
+
+          <p>Video Topic: HTML Basics <br>
+            Duration: Short Tutorial <br>
+            Learning Goal: Understanding media embedding</p>
+
+        </section>
+
+        <section id="audio">
+
+            <h3>Learning Audio</h3>
+
+            <p>This audio clip is useful for revising concepts while multitasking.<br>I often listen to it during breaks or revision time.</p>
+
+            <audio controls>
+            <source src="../assets/audio.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+            </audio> 
+
+
+            <p>Audio Type: Voice Explanation <br>
+                Purpose: Concept Revision <br>
+                Usage: Daily Practice</p>
+
+        </section>
+
+
+        <section>
+ 
+            <h3>Media Details List</h3>
+
+            <p>Media Used on This Page:</p>
+
+            <ul>
+                <li>Video Tutorial</li>
+                <li>Audio Explanation</li>
+                <li>Poster Image</li>
+            </ul>
+ 
+            <p>Steps I Follow While Learning:</p>
+            <ol>
+                <li>Watch the learning video</li>
+                <li>Listen to the audio explanation</li>
+                <li>Practice by writing code</li>
+                <li>Review mistakes and improve</li>
+            </ol>
+
+    <details>
+        <summary>Accessibility Note</summary>
+        <p>Captions and fallback text are important so that media is accessible to all users.</p>
+    </details>
+
+        
+ </main>
+
+    <footer id="contact-info">
+
+        <address>
+            Created by: Iqra Amin <br>
+            Field: Software Engineering <br>
+            Location: Pakistan
+        </address>       
+
+        <p>This page is built as part of my HTML media practice.</p>
+        <p><a href="#">Back to top of the page</a></p>
+
+
+    </footer>
+
+    
+
+</body>
+</html>
