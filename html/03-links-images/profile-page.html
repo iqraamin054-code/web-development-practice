@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="assets/favicon.png" type="image/x-icon">
+    <link rel="icon" href="../assets/favicon.png" type="image/png">
     <title>My Profile Page</title>
 </head>
 
@@ -22,22 +22,24 @@
  
     <hr>
 
-    <p>
+      <!--  A paragraph cannot contain block elements like <ul>. -->
 
-    <ul>
-        <li><a href="#skills">My Core Skills</a></li>
-        <li><a href="#platforms">learning platform i use</a>    
-        </li>
-    </ul>
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="#skills">My Core Skills</a></li>
+            <li><a href="#platforms">Learning Platform I Use</a>    
+            </li>
+        </ul>
+    </nav>
 
-   </p>
+   
 
     <hr>
 
 
     <figure>
 
-        <img src="assets/favicon.png" title="my profile image" alt="my profile image" width="404" height="316" loading="lazy">
+        <img src="../assets/favicon.png" title="profile picture" alt="Illustration representing my web development learning journey" width="404" height="316">
 
         <figcaption>This is my profile image</figcaption>
 
@@ -51,7 +53,7 @@
 
             <p>I am a passionate learner who likes exploring new technologies and improving skills step by step. I believe consistency and daily practice are the keys to success.</p>
 
-            <p>I usually follow this routine while learning web development:
+            <p>I usually follow this routine while learning web development:</p>
 
         <ol>
             <li>Revise previous concepts</li>
@@ -60,7 +62,7 @@
             <li>Review mistakes</li>
         </ol> 
 
-            </p>
+            
 
 
         <p>for more information you can visit my 
@@ -77,7 +79,7 @@
 
         <h3>My Core Skills</h3>
 
-        <p>These are the areas I am currently focusing on:
+        <p>These are the areas I am currently focusing on:</p>
 
         <ul>
             <li>HTML</li>
@@ -87,7 +89,7 @@
             <li>UI/UX Basics</li>
         </ul>
 
-        </p>
+        
 
     </section>
 
@@ -102,7 +104,6 @@
 
         <p>You can find me on the following platforms:</p>
 
-        <nav aria-label="primary navigation">
 
             <ul>
 
@@ -116,7 +117,6 @@
 
             </ul>
 
-        </nav>
 
     </section>
 
@@ -132,12 +132,15 @@
 
             <p>I regularly learn from these websites:</p>
 
-        <nav aria-label="secondary navigation">
+
+
+    <!-- An extra note rel="noopener noreferrer".This prevents security risks. If we using target -->
 
             <ul>
 
                 <li> 
-        <a href="https://developer.mozilla.org" target="_blank"> <abbr title="Mozilla Developer         Network">MDN Web Docs</abbr> </a> </li>
+        <a href="https://developer.mozilla.org" target="_blank" rel="noopener noreferrer">
+            <abbr title="Mozilla Developer Network">MDN Web Docs</abbr> </a> </li>
 
                 <li><a href="https://www.freecodecamp.org" target="_blank">freeCodeCamp</a></li>
 
@@ -145,7 +148,6 @@
 
             </ul>
 
-        </nav>
 
     </section>
 
@@ -156,11 +158,10 @@
     <figure>
 
         <a href="https://www.w3schools.com"> 
-
-    <img  src="assets/w3School.png" title="W3Schools"  alt="W3Schools website" width="404" height="316" > 
+    <img src="../assets/w3School.png" title="W3Schools"  alt="W3Schools website" width="404" height="316" loading="lazy" > 
         </a>
 
-        <figcaption>This is the best resource to learn html</figcaption>
+        <figcaption>This is a great resource to learn HTML.</figcaption>
 
     </figure>
 
@@ -172,26 +173,25 @@
        
         <h3>Location Information</h3>
 
-        <p>Iqra Amin</p>
-
-        <address>Lahore, Pakistan</address>
-
-        <p>View my location here: <br>
+        <address>
+            Iqra Amin <br>
+            Lahore, Pakistan <br>
+            View my location here: <br>
             <a href="https://www.google.com/maps" target="_blank">Google Map</a>
+        </address>
 
-         </p>
 
-        <p>You can download the favicon logo from here:
+        <p>You can download the favicon logo from here:</p>
 
         <ul>
 
             <li> 
-                <a href="assets/favicon.png" download >favicon</a> 
+                <a href="../assets/favicon.png" download >favicon</a> 
             </li>
 
         </ul>
 
-        </p>
+        
 
     </section>
 
@@ -212,8 +212,8 @@
 
     </p>
 
-   <!--  An extra note for me "/" work in html to go back to root page and root page is always index.html file
-    <a href="/">profile page</a> -->
+   <!--  
+    01- An extra note for me "/" work in html to go back to root page and root page is always index.html file <a href="/">profile page</a> -->
 
 
 </body>

@@ -5,10 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Iqra">
     <meta name="description" content="this is the practice of basic html (tags,text)">
-    <link rel="icon" href="html5.png" type="image/x-icon">
+    <link rel="icon" href="../assets/html5.png" type="image/png">
     <title>About Me</title>
 </head>
+
 <body>
+
+    <!--
+IMPORTANT NOTES ABOUT FILE PATHS
+
+01- ../ means go back ONE folder level.
+    From 01-basic-html/about-me.html
+    ../ takes you back to the html folder,
+    then you can go into assets → html5.png
+
+02- /html/assets/html5.png starts from the ROOT of the server.
+    It may work in Live Server, but it can break on GitHub Pages
+    or other hosting if the root structure is different.
+
+03- <link rel="stylesheet" href="style.css">
+    This works when the CSS file is in the SAME folder
+    as the current HTML file.
+-->
 
    <h1>About Me</h1>
 
@@ -20,7 +38,7 @@
 
     <h2>My Learning Journey</h2>
 
-    <p>I started learning HTML to understand how websites are  structured. HTML helps me organize content in a clear and meaningful way.</p>
+    <p>I started learning HTML to understand how websites are structured. HTML helps me organize content in a clear and meaningful way.</p>
 
     <p>Learning <strong>HTML is important</strong> because it is the foundation of all web pages. Without HTML, a website cannot exist.</p>
 
@@ -62,9 +80,9 @@
 
     <hr>
 
-    <h4>Final Note</h>
+    <h3>Final Note</h3>
     
-    <p>Thank you for visiting my About Me page. <br> This page is created only using basic HTML concepts </p>
+    <p>Thank you for visiting my About Me page. <br> This page is created using only basic HTML concepts.</p>
 
 </body>
 </html>

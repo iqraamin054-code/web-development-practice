@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="html5.png" type="image/x-icon">
+    <link rel="icon" href="../assets/html5.png" type="image/png">
     <title>Semantic Mini Project</title>
 </head>
 
@@ -11,16 +11,16 @@
 
     <header>
 
-            <h1>My Learning Journal</h1>
+        <h1>My Learning Journal</h1>
 
-            <p>Welcome to my learning journal. <br>
+        <p>Welcome to my learning journal. <br>
 This page documents my journey into web development using meaningful structure and clean content organization. <br>
 I believe learning becomes more effective when progress is written, reviewed, and reflected upon.</p>
 
 
      <!-- nav>ul>li*4>a -->
 
-        <nav>
+        <nav aria-label="Main Navigation">
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#learning-journal">Learning Journal</a></li>
@@ -90,18 +90,12 @@ I believe learning becomes more effective when progress is written, reviewed, an
 
     </section>
 
-
-      <h3>Helpful Note</h3>
-
-       <aside>
-        <details>
-
-            <summary>Tips:</summary>
-
-            <p>Learning HTML is not about memorizing tags. <br>
-It is about understanding <mark>why</mark> a piece of content exists and <mark>where</mark> it belongs on a page.</p>
-
-        </details>
+        <aside>
+            <h3>Helpful Note</h3>
+                <details>
+                    <summary>Tips:</summary>
+                    <p>Learning HTML is not about memorizing tags. <br> It is about understanding <mark>why</mark> a piece of content exists and <mark>where</mark> it belongs on a page.</p>
+                </details>
        </aside>
 
 
@@ -114,11 +108,14 @@ It is about understanding <mark>why</mark> a piece of content exists and <mark>w
         <p>I regularly study and practice from these platforms:</p>
     
         <ul>
-                <li><a href="https://developer.mozilla.org" target="_blank">MDN Web Docs</a>
+                <li><a href="https://developer.mozilla.org" target="_blank" rel="noopener noreferrer">
+                    MDN Web Docs</a>
                 </li>
-                <li><a href="https://www.freecodecamp.org" target="_blank">freeCodeCamp</a>
+                <li><a href="https://www.freecodecamp.org" target="_blank" 
+                    rel="noopener noreferrer">freeCodeCamp</a>
                 </li>
-                <li><a href="https://www.w3schools.com" target="_blank">W3Schools</a>
+                <li><a href="https://www.w3schools.com" target="_blank"
+                     rel="noopener noreferrer">W3Schools</a>
                 </li>
             </ul>
 
@@ -150,13 +147,13 @@ It is about understanding <mark>why</mark> a piece of content exists and <mark>w
 
       <footer>
 
-        &copy;2026 Learning Journal
-
+        <p>&copy; 2026 Learning Journal</p>
+        
         <p>Built using semantic HTML concepts only. <br> This page is part of my HTML practice repository.</p>
 
       </footer>
 
-
+ 
       
 </body>
 </html>
