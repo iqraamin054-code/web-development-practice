@@ -8,6 +8,208 @@
 </head>
 
 <body>
+
+    <header>
+
+   <h1>Contact Me</h1>
+
+   <p>I would love to hear from you. <br> Please fill out the form below to get in touch with me regarding questions, feedback, or opportunities.</p>
+
+   </header>
+
+
+   <main>
+
+    <article>
+
+   <form action="https://httpbin.org/get" method="get">
+
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <p>
+                <label for="full-name">Full Name</label>
+                <input type="text" name="fullName" id="full-name" placeholder="Enter your full name" autocomplete="on" 
+                autofocus required>                
+            </p>
+
+            <p>
+                <label for="username">Username</label> 
+                <input type="text" name="userName" id="username" placeholder="Enter username" autocomplete="on" required>
+            </p>
+
+            <p>
+                <label for="email-address">Email Address</label>
+                <input type="email" name="emailAddress" id="email-address" placeholder="Enter your email " 
+                autocomplete="on" required>                
+            </p>
+
+            <p>
+                <label for="phone-number">Phone Number</label>
+                <input type="tel" name="phoneNumber" id="phone-number" placeholder="3333333333" pattern="[0-9]{10}"
+                 required>  <!--OR pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" / this show pakistan no pattern="03[0-9]{9}" -->              
+            </p>
+
+            <p>
+                <label for="date-of-birth">Date of Birth</label>
+                <input type="date" name="dateOfBirth" id="date-of-birth" required >                
+            </p> 
+
+
+        </fieldset>
+
+
+        <fieldset>
+                <legend>Account Details</legend>
+
+                <p>
+                   <label for="password">Password</label> 
+                   <input type="password" name="password" id="password" placeholder="Enter Password" required>
+                </p>
+
+                <p>
+                   <label for="confirm-password">Confirm Password</label> 
+                   <input type="password" name="confirmPassword" id="confirm-password" required>
+                </p>
+
+            </fieldset>
+
+
+        <fieldset>
+            <legend>Contact Preferences</legend>
+            <p>Preferred method of contact:</p>
+
+            <p>
+                <input type="radio" name="contact-method" id="email" value="email">
+                <label for="email">Email</label>
+            </p>
+
+            <p>
+                <input type="radio" name="contact-method" id="phone" value="phone">
+                <label for="phone">Phone</label>
+            </p>
+
+            <p>
+                <input type="radio" name="contact-method" id="whatsApp" value="whatsApp">
+                <label for="whatsApp">WhatsApp</label>
+            </p>
+
+            <p>Best time to contact:</p>
+
+            <p>
+                <input type="radio" name="time-to-contact" id="morning" value="morning">
+                <label for="morning">Morning</label>
+            </p>
+
+            <p>
+                <input type="radio" name="time-to-contact" id="afternoon" value="afternoon">
+                <label for="afternoon">Afternoon</label>
+            </p>
+
+            <p>
+                <input type="radio" name="time-to-contact" id="evening" value="evening">
+                <label for="evening">Evening</label>
+            </p>
+
+            </fieldset>
+
+
+            <fieldset>
+                <legend>Message Details</legend>
+
+                <p>Subject of message:</p> 
+
+                <p>
+                    <label for="subject">Subject</label>
+
+                    <input type="text" name="subject" id="subject" list="messages">
+
+                    <datalist id="messages">
+                        <option value="General Inquiry">
+                        <option value="Feedback">
+                        <option value="Collaboration">
+                        <option value="Support">
+                    </datalist>
+
+                </p>
+            
+
+                <p>
+                    <label for="message">Your Message:</label>
+                    <br>
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Type your message here"></textarea>
+                </p>
+
+                <p>
+                    <label for="uploading-file">Upload File here:</label>
+                    <input type="file" name="uploadingFile" id="uploading-file" >
+                </p>
+
+            </fieldset>
+
+
+            <fieldset>
+                <legend>Additional Information</legend>
+                <p>How did you hear about me?</p>
+
+                <p>
+                    <input type="checkbox" name="information" id="social-media" value="social-media">
+                    <label for="social-media">Social Media</label>
+                </p>
+
+                <p>
+                    <input type="checkbox" name="information" id="friend" value="friend">
+                    <label for="friend">Friend</label>
+                </p>
+
+                <p>
+                    <input type="checkbox" name="information" id="search-engine" value="search-engine">
+                    <label for="search-engine">Search Engine</label>
+                </p>
+
+                <p>
+                    <input type="checkbox" name="information" id="other" value="other">
+                    <label for="other">Other</label>
+                </p>
+
+            
+            </fieldset>
+
+            <fieldset>
+                <legend>Agreement</legend>
+
+                <p>
+                    <input type="checkbox" name="terms" id="terms" value="terms" required>
+                    <label for="terms">I agree to the terms and conditions</label>
+                </p>
+
+                <p>
+                    <input type="checkbox" name="confirmation" id="confirmation" value="confirmation" required>
+                    <label for="confirmation" >I confirm that the information provided is correct</label>
+                </p>
+
+                <button type="submit">Submit</button>
+               <!--  <button type="submit" formaction="https://httpbin.org/get" formmethod="post">Post</button> -->
+                <button type="reset">Reset Form</button>
+
+            </fieldset>
+
+   </form>
+
+   </article>
+
+   </main>
+
+
+   <footer>
+
+    <p>Your information will be kept private and will only be used to respond to your message.</p>
+
+   </footer>
+    
+
+
+
     
 </body>
 </html>
