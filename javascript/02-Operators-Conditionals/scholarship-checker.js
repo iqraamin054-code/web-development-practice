@@ -4,7 +4,7 @@
 
 //Scholarship Qualification Checker
 
-let studentName = "Iqra"
+/* let studentName = "Iqra"
 let studentGPA = 3.6;
 let familyIncome = 40000;
 let extracurricularActivities = false;
@@ -47,8 +47,31 @@ if (qualificationStatus) {
 if (qualificationStatus && city === "Karachi") {
     interviewStatus = "Eligible for local university scholarship interview";   
 }else{
-    interviewStatus = "Not eligible for local university scholarship interview";}
+    interviewStatus = "Not eligible for local university scholarship interview";
+}
+ */
 
+
+// 2. ternary operators
+
+let studentName = "Iqra"
+let studentGPA = 3.6;
+let familyIncome = 40000;
+let extracurricularActivities = false;
+let city = "Karachi";
+
+let qualificationStatus =  studentGPA >= 3.5 || (studentGPA >= 3.0 && extracurricularActivities); //The condition itself already evaluates to true or false
+
+let qualification =  qualificationStatus ? `${studentName}, Congratulations! you are qualified for scholarship` : `${studentName}, Sorry, you are not qualified for scholarship`;
+
+let scholarshipType = qualificationStatus
+    ? (familyIncome < 30000 ? "Full Scholarship"
+        : familyIncome <= 60000 ? "Partial Scholarship"
+        : "Merit Certificate Only")
+    : "No scholarship awarded.";
+
+let interviewStatus = qualificationStatus && city === "Karachi" ? "Eligible for local university scholarship interview" : "Not eligible for local university scholarship interview";
+    
 
 console.log(`
     Hello ${studentName}
@@ -61,4 +84,3 @@ console.log(`
     `);
 
 
-    

@@ -4,7 +4,7 @@
 
 //Job Eligibility Checker 
 
-const attendeeName = "Iqra";
+/* const attendeeName = "Iqra";
 let attendeeAge = 22;
 const educationLevel = "intermediate";
 let City = "Karachi";
@@ -25,7 +25,7 @@ if (educationLevel === "graduate" || (educationLevel === "intermediate" && atten
 
 let eligibilityStatus = educationLevel === "graduate" || (educationLevel === "intermediate" && attendeeAge >= 21); */
 
-// Create message from boolean
+/* // Create message from boolean
 if (eligibilityStatus) {
     eligibilityMessage = "You are eligible for job";
 }else {
@@ -37,7 +37,22 @@ if (eligibilityStatus && City === "Karachi") {
     message = "Priority interview location";    
 }else{
     message = "Profile does not match the bonus condition.";
-}
+} */
+
+    
+ // 2. ternary operators
+
+const attendeeName = "Iqra";
+let attendeeAge = 22;
+const educationLevel = "intermediate";
+let City = "Karachi";
+
+let eligibilityStatus = educationLevel === "graduate" || educationLevel === "intermediate" && attendeeAge >= 21 ;
+
+let eligibilityMessage =  eligibilityStatus ? "You are eligible for job": "You are not eligible for job";
+
+let message = eligibilityStatus && City === "Karachi"? "Priority interview location": "Profile does not match the bonus condition.";
+
 
 console.log(`
     Hello ${attendeeName}
