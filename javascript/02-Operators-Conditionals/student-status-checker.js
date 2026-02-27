@@ -2,7 +2,7 @@
 // 1. if/else statements
 // 2. ternary operators
 
-//Student Status Checker
+//----------------------------------Student Status Checker-----------------------------
 
 /* const fullName = "Iqra Amin";
 let age = 22;

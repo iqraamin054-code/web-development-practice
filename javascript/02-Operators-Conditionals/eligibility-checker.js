@@ -2,7 +2,7 @@
 // 1. if/else statements
 // 2. ternary operators
 
-//Job Eligibility Checker 
+//----------------------------------Job Eligibility Checker -----------------------
 
 /* const attendeeName = "Iqra";
 let attendeeAge = 22;
@@ -47,7 +47,7 @@ let attendeeAge = 22;
 const educationLevel = "intermediate";
 let City = "Karachi";
 
-let eligibilityStatus = educationLevel === "graduate" || educationLevel === "intermediate" && attendeeAge >= 21 ;
+let eligibilityStatus = educationLevel === "graduate" || (educationLevel === "intermediate" && attendeeAge >= 21);
 
 let eligibilityMessage =  eligibilityStatus ? "You are eligible for job": "You are not eligible for job";
 

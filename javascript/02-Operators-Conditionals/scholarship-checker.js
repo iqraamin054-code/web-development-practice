@@ -2,7 +2,7 @@
 // 1. if/else statements
 // 2. ternary operators
 
-//Scholarship Qualification Checker
+//------------------------Scholarship Qualification Checker---------------------
 
 /* let studentName = "Iqra"
 let studentGPA = 3.6;
