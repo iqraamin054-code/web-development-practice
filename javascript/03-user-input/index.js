@@ -6,14 +6,14 @@
 03- prompt */
 
 
-
+// USER INPUT
 let userName = prompt("Enter your name");
 
 if (userName) {
     userName = userName.trim();
 
     if (userName) {
-        console.log(`Welcome ${userName}`);
+        console.log(`Welcome ${userName}\nHope you have an amazing day!`);
     } else {
         console.log("You didn't enter your name");
     }
@@ -22,6 +22,7 @@ if (userName) {
     console.log("You didn't enter your name");
 }
 
+// AGE INPUT
 // prompt always return string make sure to convert into number
 
 let age = Number(prompt("Enter your age"));
@@ -29,14 +30,25 @@ let age = Number(prompt("Enter your age"));
 if (!isNaN(age) && age > 0) {
 
     if (age < 18) {
-        console.log("You are a minor");
-    } else if (age >= 18 && age <= 59) {
-        console.log("You are an adult");
+        console.log("You are a young achiever 🌟");
+    } else if (age <= 59) {
+        console.log("You are an ambitious adult 🚀");
     } else {
-        console.log("You are a senior");
+        console.log("You are a wise legend 👑");
     }
 
-} else {
+
+
+// STUDENT STATUS (runs only if age is valid)
+
+let studentStatus= confirm("Are you a student?\nOK = Yes\nCancel = No");
+
+if (studentStatus && (age >= 18 && age <= 59) ){
+    console.log("You receive a student benefit 🎓");
+}else{
+        console.log("Thank you for your response 😊");
+} 
+
+}else {
     console.log("Please enter a valid age");
 }
-
