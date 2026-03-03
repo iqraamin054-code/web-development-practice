@@ -28,7 +28,7 @@ console.log(greetUser(prompt("Enter your name:")));
 
 const sub = (num1, num2) => {
 
-    if (!isNaN(num1) && !isNaN(num2) ) {
+    if (!isNaN(num1) || !isNaN(num2) ) {
        return num1 - num2;
     }
 
@@ -56,7 +56,7 @@ const checkNumber = (num) => {
         if(num > 0){
             return `${num} is positive`;
         }else if (num < 0) {
-            return `${num} is nrgative`;
+            return `${num} is negative`;
         }else{
             return `${num} is zero`;
         }
@@ -104,7 +104,7 @@ const finalPrice = (price, discountPercentage) => {
     let discountAmount = (price * discountPercentage) / 100;
     let result = price - discountAmount;
 
-    return `Final price after ${discountPercentage}% discount is ${result}`;
+    return `Final price after ${discountPercentage}% discount is ${result.toFixed(2)}`;
 };
 
 let priceRange = prompt("Enter the price");
@@ -137,7 +137,8 @@ console.log(localScope());
 // Task 7 Create a function that call another arrow function and uses its returned value in a sentence.
 
 const callFunction = () => {
-    return greetUser(userName)
+    let name = "Iqra";
+    return greetUser(name);
 }
 
-console.log (callFunction()); 
+console.log(callFunction());
