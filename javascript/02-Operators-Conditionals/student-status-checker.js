@@ -4,7 +4,9 @@
 
 //----------------------------------Student Status Checker-----------------------------
 
-/* const fullName = "Iqra Amin";
+// 1. if/else statements
+
+const fullName = "Iqra Amin";
 let age = 22;
 let cityName = "Karachi";
 let isStudent = true;
@@ -44,7 +46,19 @@ if (age >= 18 && isStudent && cityName === "Karachi") {
 }else {
     reply = "Profile does not match the bonus condition.";
 }
- */
+
+console.log(
+    `Hello ${fullName}
+    Age: ${age}
+    Category: ${ageCategory}
+    City: ${cityName}
+    ${cityStatus}
+    ${studentStatus}
+    ${reply}
+`);
+ 
+ 
+/* 
 
 // 2. ternary operators
 
@@ -69,6 +83,7 @@ console.log(
     ${cityStatus}
     ${studentStatus}
     ${reply}
-    `);
+`);
  
 
+ */

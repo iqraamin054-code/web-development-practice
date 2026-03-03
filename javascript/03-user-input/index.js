@@ -30,11 +30,11 @@ let age = Number(prompt("Enter your age"));
 if (!isNaN(age) && age > 0) {
 
     if (age < 18) {
-        console.log("You are a young achiever 🌟");
+        console.log("You are a young achiever");
     } else if (age <= 59) {
-        console.log("You are an ambitious adult 🚀");
+        console.log("You are an ambitious adult");
     } else {
-        console.log("You are a wise legend 👑");
+        console.log("You are a wise legend");
     }
 
 
@@ -46,7 +46,7 @@ let studentStatus= confirm("Are you a student?\nOK = Yes\nCancel = No");
 if (studentStatus && (age >= 18 && age <= 59) ){
     console.log("You receive a student benefit 🎓");
 }else{
-        console.log("Thank you for your response 😊");
+        console.log("Thank you for your response");
 } 
 
 }else {

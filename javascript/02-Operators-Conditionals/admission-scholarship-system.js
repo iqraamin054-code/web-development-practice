@@ -3,7 +3,9 @@
 // 2. ternary operators
 
 //---------------STUDENT ADMISSION & SCHOLARSHIP DECISION SYSTEM-----------
-/* 
+
+// 1. if/else statements
+
 const studentName = "Iqra";
 let studentGPA = 3.9;
 let educationLevel = "intermediate";
@@ -71,9 +73,9 @@ console.log(`
     Scholarship type: ${scholarshipType}
     Interview eligibility result: ${interviewType}
     `);
- */
+ 
 
-
+/* 
     // 2. ternary operators
 
     const studentName = "Iqra";
@@ -108,3 +110,4 @@ console.log(`
     Interview eligibility result: ${interviewType}
     `);
 
+ */

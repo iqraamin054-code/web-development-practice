@@ -4,7 +4,9 @@
 
 //------------------------Scholarship Qualification Checker---------------------
 
-/* let studentName = "Iqra"
+// 1. if/else statements
+
+let studentName = "Iqra"
 let studentGPA = 3.6;
 let familyIncome = 40000;
 let extracurricularActivities = false;
@@ -49,12 +51,23 @@ if (qualificationStatus && city === "Karachi") {
 }else{
     interviewStatus = "Not eligible for local university scholarship interview";
 }
- */
+ 
+console.log(`
+    Hello ${studentName}
+    Student GPA: ${studentGPA}
+    Family Income: ${familyIncome}
+    Qualification Status: ${qualification}
+    Scholarship Result: ${scholarshipType}
+    City: ${city}
+    Interview Status: ${interviewStatus}
+    `);
 
 
-// 2. ternary operators
+/* 
 
-let studentName = "Iqra"
+    // 2. ternary operators
+
+let studentName = "Iqra";
 let studentGPA = 3.6;
 let familyIncome = 40000;
 let extracurricularActivities = false;
@@ -83,4 +96,4 @@ console.log(`
     Interview Status: ${interviewStatus}
     `);
 
-
+ */

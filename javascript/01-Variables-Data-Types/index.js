@@ -16,7 +16,7 @@ console.log(`Check if name includes a specific letter: ${fullName.includes("meen
 console.log(`Check if name includes a specific letter: ${fullName.includes(" ")}`);
 
 const myName = "   Iqra   "
-console.log(`Before removing extra space:${myName}`)
+console.log(`Before removing extra space:${myName}`);
 console.log(`Remove extra spaces:${myName.trim()}`);
 
 console.log(`Extract first name:${fullName.slice(0,4)}`);
@@ -40,7 +40,7 @@ console.log(`type of isStudent: ${typeof isStudent}`);
 
 //---------------------------------------------
 
-console.log(`My name is ${myName.trim()},I am ${age} years old,and I live in ${city}`)
+console.log(`My name is ${myName.trim()},I am ${age} years old,and I live in ${city}`);
 
 //Write a code that will return a random letter from your name
 

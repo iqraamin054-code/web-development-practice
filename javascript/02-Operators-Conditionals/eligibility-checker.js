@@ -4,7 +4,9 @@
 
 //----------------------------------Job Eligibility Checker -----------------------
 
-/* const attendeeName = "Iqra";
+// 1. if/else statements
+
+const attendeeName = "Iqra";
 let attendeeAge = 22;
 const educationLevel = "intermediate";
 let City = "Karachi";
@@ -21,11 +23,11 @@ if (educationLevel === "graduate" || (educationLevel === "intermediate" && atten
         eligibilityStatus = false;   
 } 
 
-/*  OR 
 
-let eligibilityStatus = educationLevel === "graduate" || (educationLevel === "intermediate" && attendeeAge >= 21); */
 
-/* // Create message from boolean
+// OR let eligibilityStatus = educationLevel === "graduate" || (educationLevel === "intermediate" && attendeeAge >= 21); 
+
+// Create message from boolean
 if (eligibilityStatus) {
     eligibilityMessage = "You are eligible for job";
 }else {
@@ -37,10 +39,20 @@ if (eligibilityStatus && City === "Karachi") {
     message = "Priority interview location";    
 }else{
     message = "Profile does not match the bonus condition.";
-} */
+} 
+
+console.log(`
+    Hello ${attendeeName}
+    Age: ${attendeeAge}
+    Education: ${educationLevel}
+    Eligibility: ${eligibilityMessage}
+    City: ${City}
+    ${message}
+`);
 
     
- // 2. ternary operators
+ /* 
+   // 2. ternary operators
 
 const attendeeName = "Iqra";
 let attendeeAge = 22;
@@ -62,4 +74,4 @@ console.log(`
     City: ${City}
     ${message}
 `);
- 
+  */
