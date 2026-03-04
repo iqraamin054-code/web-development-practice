@@ -21,18 +21,17 @@ const greetUser = function(userName){
     return "You did not enter your name";  
 }
 
-console.log(greetUser(prompt("Enter your name:"))); 
+console.log(greetUser(prompt("Enter your name:")));  
 
 
 // Task 2 Create an arrow function that takes two numbers and returns their subtraction.
 
 const sub = (num1, num2) => {
 
-    if (!isNaN(num1) || !isNaN(num2) ) {
-       return num1 - num2;
+    if (isNaN(num1) || isNaN(num2) ) {
+        return "you did not enter a valid number";
     }
-
-    return "you did not enter a valid number";
+    return num1 - num2;
 }
 
 let value1 = prompt("Enter first number:");
@@ -44,15 +43,16 @@ if ((value1 === null  || value1.trim() === "")||(value2 === null  || value2.trim
         let num1 = Number(value1);
         let num2 = Number(value2);
         console.log(sub(num1,num2));
-    } 
+    }
     
-    
-
+     
 // Task 3 Create an arrow function that takes one number and returns whether it is positive, negative, or zero.
 
 const checkNumber = (num) => {
     
-     if (!isNaN(num) ){ // true
+     if (isNaN(num) ){ 
+        return "you did not enter a valid number"; 
+     }
         if(num > 0){
             return `${num} is positive`;
         }else if (num < 0) {
@@ -60,11 +60,8 @@ const checkNumber = (num) => {
         }else{
             return `${num} is zero`;
         }
-    }
-    return "you did not enter a valid number"; 
+}
         
-    }
-
 
 let value = prompt("Enter a number");
 if (value === null || value.trim() === "") {
@@ -141,4 +138,4 @@ const callFunction = () => {
     return greetUser(name);
 }
 
-console.log(callFunction());
+console.log(callFunction()); 
