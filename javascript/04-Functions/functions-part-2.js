@@ -3,10 +3,12 @@
 // 01-Create a function that takes two numbers and returns their multiplication.
 
 function multiplication (num1, num2) {
-    if (!isNaN(num1) && !isNaN(num2)) {
-        return num1 * num2;
+    if (isNaN(num1) || isNaN(num2)) {
+        return "you did not enter a valid number";
+
     }
-    return "You did not enter a valid number";
+    return num1*num2 ;
+
 }
 
 let value1 = prompt("Enter number 1 for multiplication");
@@ -22,20 +24,20 @@ if((value1 === null || value1.trim() === "") ||
     }
     
  
- // 02-Create a function that takes a number and returns whether it is even or odd.
+  // 02-Create a function that takes a number and returns whether it is even or odd.
 
-function checkEvenOdd(num) {
-    if (!isNaN(num)) {
+ function checkEvenOdd(num) {
+    if (isNaN(num)) {
+        return  "You did not enter a valid number";
+    }
         if(num % 2 === 0){
             return `${num} is even number`;
         }else{
             return `${num} is odd number`;
-        }
-    }
-    return  "You did not enter a valid number";
+        }     
 }
 
-let value = prompt("Enter a number to check for even or odd");
+ let value = prompt("Enter a number to check for even or odd");
 
 if(value === null || value.trim() === ""){
     console.log("you did not enter anything");
@@ -65,25 +67,26 @@ let cityName = prompt("Enter your city name");
 
 console.log(Welcomemessage(userName,cityName));
  
-
+ 
 
 // 04-Create a function that takes marks (0–100) and returns:Fail,Pass,Good,Excellent
 
 function resultChecker(marks) {
-    if(!isNaN(marks)){
-    if (marks < 0 || marks > 100) {
-        return "Invalid marks. Please enter marks between 0 and 100.";
-    } else if (marks <= 35) {
-        return `Marks ${marks}: Fail`;
-    } else if (marks <= 50) {
-        return `Marks ${marks}: Pass`;
-    } else if (marks <= 70) {
-        return `Marks ${marks}: Good`;
-    } else {
-        return `Marks ${marks}: Excellent`;
+    if(isNaN(marks)){
+        return "You did not enter a valid number";
     }
-    }
-    return "You did not enter a valid number";
+        if (marks < 0 || marks > 100) {
+            return "Invalid marks. Please enter marks between 0 and 100.";
+        } else if (marks <= 35) {
+            return `Marks ${marks}: Fail`;
+        } else if (marks <= 50) {
+            return `Marks ${marks}: Pass`;
+        } else if (marks <= 70) {
+            return `Marks ${marks}: Good`;
+        } else {
+            return `Marks ${marks}: Excellent`;
+        }   
+    
 }
 
 let grades = prompt("Enter your marks");
@@ -99,7 +102,9 @@ if(grades === null || grades.trim() === ""){
 // 05-Create a function that takes two numbers and returns the larger number.
 
 function checkNumber (num1,num2) {
-    if(!isNaN(num1) && !isNaN(num2)){
+    if(isNaN(num1) || isNaN(num2)){
+        return "You did not enter a valid number";
+    }
         if(num1 > num2){
             return `${num1} is larger than ${num2}`;
         }else if (num1 < num2) {
@@ -107,8 +112,7 @@ function checkNumber (num1,num2) {
         } else {
              return `${num1} is equal to ${num2}`;
         }
-    }
-    return "You did not enter a valid number";
+    
 }
 
 let number1 = prompt('Enter the number 1 to check whether it is larger or not');
@@ -140,9 +144,3 @@ function callingFunction(num1,num2) {
 
 console.log(`calling a function within a function${callingFunction(3,5)}`);
 
-
-
- 
-
- 
- 
