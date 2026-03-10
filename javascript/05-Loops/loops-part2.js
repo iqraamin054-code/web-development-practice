@@ -28,6 +28,13 @@ for (let num = 1; num <= 30; num++) {
        console.log(num);   
 }
 
+/*  or 
+for (let num = 1; num <= 30; num++) {
+   if(num % 5 !== 0) {
+       console.log(num); 
+   }
+} */
+
 // Print numbers from 1 to 20. Stop the loop completely when the number becomes 13.
 
 for (let num = 1; num <= 20; num++) {
