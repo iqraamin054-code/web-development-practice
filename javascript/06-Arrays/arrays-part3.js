@@ -3,7 +3,7 @@
 // 1. Create an array of numbers:[3, 6, 9, 12, 15]. Use a for...of loop to print each number.
 
 const numbers = [3, 6, 9, 12, 15];
-// This directly gives you each value in the array.
+// This directly gives each value in the array.
 for (let num of numbers) {
     console.log(num);    
 }
@@ -28,9 +28,7 @@ for(let arr of myArray){
 
 const myNumbers = [2, 4, 6, 8, 10];
 
-myNumbers.forEach((num) => { // callback function
-    console.log(num*num);
-});
+myNumbers.forEach((num) => console.log(num*num));
 
 
 /* 4. Create an array:
