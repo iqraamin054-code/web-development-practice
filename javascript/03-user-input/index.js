@@ -6,7 +6,7 @@
 03- prompt */
 
 
-// USER INPUT
+ // USER INPUT
 let userName = prompt("Enter your name");
 
 if (userName) {
@@ -20,35 +20,40 @@ if (userName) {
 
 } else {
     console.log("You didn't enter your name");
-}
+} 
 
 // AGE INPUT
 // prompt always return string make sure to convert into number
 
-let age = Number(prompt("Enter your age"));
 
-if (!isNaN(age) && age > 0) {
+let input = prompt("Enter your age");
 
-    if (age < 18) {
-        console.log("You are a young achiever");
-    } else if (age <= 59) {
-        console.log("You are an ambitious adult");
+if (input === null || input.trim() === "") {
+    console.log("You did not enter anything");
+} else {
+    let age = Number(input);
+
+    if (!isNaN(age) && age > 0) {
+
+        if (age < 18) {
+            console.log("You are a young achiever");
+        } else if (age <= 59) {
+            console.log("You are an ambitious adult");
+        } else {
+            console.log("You are a wise legend");
+        }
+
+        let studentStatus = confirm("Are you a student?\nOK = Yes\nCancel = No");
+
+        if (studentStatus && age >= 18 && age <= 59) {
+            console.log("You receive a student benefit 🎓");
+        } else {
+            console.log("Thank you for your response");
+        }
+
     } else {
-        console.log("You are a wise legend");
+        console.log("Please enter a valid age");
     }
-
-
-
-// STUDENT STATUS (runs only if age is valid)
-
-let studentStatus= confirm("Are you a student?\nOK = Yes\nCancel = No");
-
-if (studentStatus && (age >= 18 && age <= 59) ){
-    console.log("You receive a student benefit 🎓");
-}else{
-        console.log("Thank you for your response");
 } 
 
-}else {
-    console.log("Please enter a valid age");
-}
+
