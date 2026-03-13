@@ -3,7 +3,6 @@
 // 1. Create an array of numbers:[3, 6, 9, 12, 15]. Use a for...of loop to print each number.
 
 const numbers = [3, 6, 9, 12, 15];
-// This directly gives each value in the array.
 for (let num of numbers) {
     console.log(num);    
 }
@@ -41,14 +40,19 @@ Use forEach() to print:
 
 (index and value) */
 
+
 const anArray = ["apple", "banana", "mango"];
 
-anArray.forEach((value, index) => { // value current element,index the position of that element
-    console.log(`Index: ${index} and Value: ${value}`);
-});
+// value current element,index the position of that element
+
+anArray.forEach((value, index) => 
+    console.log(`Index: ${index} and Value: ${value}`)
+)
+
 
 
 // 5. Create an array:[5, 10, 15, 20]. Use a loop to calculate the total sum and print it.
+
 
 let sum = 0;
 const num = [5, 10, 15, 20];
