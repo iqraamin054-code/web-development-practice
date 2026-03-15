@@ -1,4 +1,4 @@
-// Objects Part 1
+// Objects Part 1 Basics
 
 
 /* Create an object called person with these properties:

@@ -1,4 +1,4 @@
-// Objects Part 3 
+// Objects Part 3  Looping objects
 
 /* Task 1 Create an object called car with these properties:
 brand: "Toyota"

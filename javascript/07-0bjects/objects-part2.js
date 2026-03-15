@@ -1,4 +1,4 @@
-// Objects Part 2
+// Objects Part 2 Modify objects
 
 /* Task 1 Create an object called phone with these properties:
 brand: "Samsung"
