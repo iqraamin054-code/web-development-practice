@@ -48,32 +48,8 @@ if (isNaN(input)||(input < 1 || input > 3)){
             }              
     }  
      
-    
-}else if (input === 2) {
-
-        let removingTask = Number(prompt("Enter an index number")) ;
-        if (removingTask === null || removingTask < taskManager.tasks.length || removingTask > taskManager.tasks.length ){
-            console.log("invalid input");
-            userInput(input);
-
-        }else{
-
-            let cinfirnation_message = confirm("Do yant to really remone the task \n Yes === true \n No === false");
-
-            if (cinfirnation_message === true) {
-                let output = taskManager.remove_a_task(removingTask);
-                console.log("task successfully removed");
-                return output;
-            }else{
-                userInput(input);
-            }
-        }
-
-        } else {
-            return taskManager.show_all_task();
-        }
-
 }
+    }
 }
    
 
@@ -86,7 +62,7 @@ if(value === null || value.trim() === ""){
 } 
 
 
-    let userReq = confirm("Do you want to continue?");
+let userReq = confirm("Do you want to continue?");
     if(userReq === false)
         break;
 }
