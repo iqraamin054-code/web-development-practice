@@ -24,8 +24,6 @@ const taskManager = {
     }
 
 
-while (true){
-
 const userInput = (input) => {
 
 if (isNaN(input)||(input < 1 || input > 3)){
@@ -45,11 +43,8 @@ if (isNaN(input)||(input < 1 || input > 3)){
             if (message === true) {  
                 taskManager.add_a_task(addingTask);               
                 alert("Task is succesfully added"); 
-                return true;
             }        
-        return false;
         }  
-
      
 }else if (input === 2) {
 
@@ -98,13 +93,10 @@ if (isNaN(input)||(input < 1 || input > 3)){
 
                         }else {
                             alert("task successfully removed\nNo task remaining"); 
-                            
-                            return true;
                         }
-                        return false;
 
                     }else {
-                        console.log("deletion is cancelled");
+                        alert("deletion is cancelled");
                     }
                 
                 }
@@ -115,6 +107,9 @@ if (isNaN(input)||(input < 1 || input > 3)){
         }
     }
 }
+
+
+while (true){
 
 let counter = 1;               
 let taskList = "";
@@ -138,12 +133,11 @@ if(value === null || value.trim() === ""){
 
 }else{
     let input = Number(value);
-    let success = userInput(input);   
-    if (success === true){
+    userInput(input); 
+      
     let userReq = confirm("Do you want to continue?");
         if(userReq === false)
             break;
-} 
 } 
 }
 
