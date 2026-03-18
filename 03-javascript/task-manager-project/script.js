@@ -12,13 +12,15 @@ const taskManager = {
     },
     show_all_task: function(){
         if (this.tasks.length === 0){
-           console.log ("No tasks available");
+            alert ("No tasks available");
         }else{
-            let count = 1
+            let counter = 1;
+            let taskList = ""
             for (const items of this.tasks) {
-                console.log(`${count}. ${items}`);
-                count ++;
+                taskList += `${counter}. ${items}\n`;
+                counter ++;
             }
+            alert(`You Tasks:\n ${taskList}`);
         }
         }
     }
@@ -87,13 +89,8 @@ if (isNaN(input)||(input < 1 || input > 3)){
                     if (message === true) {
 
                         taskManager.remove_a_task(index);
-
-                        if (taskManager.tasks.length !== 0){
-                            alert("task successfully removed");
-
-                        }else {
-                            alert("task successfully removed\nNo task remaining"); 
-                        }
+                        
+                        alert("task successfully removed");
 
                     }else {
                         alert("deletion is cancelled");
