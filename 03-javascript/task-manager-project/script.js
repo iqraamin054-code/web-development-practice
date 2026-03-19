@@ -16,14 +16,14 @@ const taskManager = {
     tasks: [],
 
     add_a_task: function(input){
-        return this.tasks.push(input)
+         this.tasks.push(input)
     },
     remove_a_task: function(input){
         return this.tasks.splice(input,1)     
     },
     show_all_task: function(){
         if (this.tasks.length === 0){
-            alert ("No tasks available.\n");
+            alert ("No tasks available.");
 
         }else{
             let taskList = showTasks(this.tasks);
@@ -50,7 +50,7 @@ if (isNaN(input)||(input < 1 || input > 3)){
 
             if (message === true) {  
                 taskManager.add_a_task(addingTask);               
-                alert("Task is succesfully added"); 
+                alert("Task is successfully added"); 
             }        
         }  
      
@@ -58,7 +58,7 @@ if (isNaN(input)||(input < 1 || input > 3)){
 
         if (taskManager.tasks.length === 0){
             alert("There is no task in to do list.");
-            
+            return;
         }
             let taskList = showTasks(taskManager.tasks);
             let value = prompt(`${taskList}\nEnter the number of the task you want to remove:`);
