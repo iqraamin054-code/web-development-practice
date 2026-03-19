@@ -1,5 +1,16 @@
 // TASK MANAGER PROJECT Build a console-based task manager where a user can manage daily tasks.
 
+// helper function; as this is used by show_all_task,removeTask and by menu
+
+ let showTasks = (tasks)=>{
+            let counter = 1;
+            let taskList = ""
+            for (const items of tasks) {
+                taskList += `${counter}. ${items}\n`;
+                counter ++;
+            }
+            return taskList;
+     }
 
 const taskManager = {
     tasks: [],
@@ -12,25 +23,20 @@ const taskManager = {
     },
     show_all_task: function(){
         if (this.tasks.length === 0){
-            alert ("No tasks available");
-        }else{
-            let counter = 1;
-            let taskList = ""
-            for (const items of this.tasks) {
-                taskList += `${counter}. ${items}\n`;
-                counter ++;
-            }
-            alert(`You Tasks:\n ${taskList}`);
-        }
-        }
-    }
+            alert ("No tasks available.\n");
 
+        }else{
+            let taskList = showTasks(this.tasks);
+            alert(`Your Tasks:\n ${taskList}`);
+        }        
+    }
+}
+    
 
 const userInput = (input) => {
 
 if (isNaN(input)||(input < 1 || input > 3)){
     alert("You did not enter a valid number. Please try again");
-
 }else{
 
     if (input === 1) {      
@@ -53,15 +59,8 @@ if (isNaN(input)||(input < 1 || input > 3)){
         if (taskManager.tasks.length === 0){
             alert("There is no task in to do list.");
             
-        }else{
-
-            let counter = 1;               
-            let taskList = "";
-            for(let item of taskManager.tasks){ 
-                taskList += `${counter}. ${item}\n`;
-                counter ++ ;   
-            }
-
+        }
+            let taskList = showTasks(taskManager.tasks);
             let value = prompt(`${taskList}\nEnter the number of the task you want to remove:`);
 
             if (value === null || value.trim() === "" ){
@@ -90,15 +89,15 @@ if (isNaN(input)||(input < 1 || input > 3)){
 
                         taskManager.remove_a_task(index);
                         
-                        alert("task successfully removed");
+                        alert("Task successfully removed");
 
                     }else {
-                        alert("deletion is cancelled");
+                        alert("Deletion cancelled");
                     }
                 
                 }
             }
-        }
+        
         } else {
              taskManager.show_all_task();
         }
@@ -108,12 +107,7 @@ if (isNaN(input)||(input < 1 || input > 3)){
 
 while (true){
 
-let counter = 1;               
-let taskList = "";
-    for(let item of taskManager.tasks){ 
-        taskList += `${counter}. ${item}\n`;
-        counter ++ ; 
-    }  
+    let taskList = showTasks(taskManager.tasks);
 
     let menuHeader = taskManager.tasks.length !== 0 
         ? `Current Tasks:\n${taskList}\n` 
