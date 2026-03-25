@@ -3,27 +3,46 @@
 const contactManager = {
     contacts: [],
 
-    addContact: function(input1,input2){
+    addContact: function(userName,phoneNumber){
 
-        return this.contacts.push({input1,input2})
-
-    },
-    viewContacts: function(input){
-
+        return this.contacts.push({userName,phoneNumber});
 
     },
-    deleteContact: function(input){
 
-        return this.contacts.slice(input,1)
+    viewContacts: function(){
+
+        if(this.contacts.length === 0){
+            alert("No contact available"); 
+
+        }else{
+
+            let counter = 1;
+            let contactList = "";
+            for(let info of this.contacts){
+
+                contactList += `${counter}. ${info.userName}-${info.phoneNumber}\n`;
+                
+                counter ++;
+            }
+
+            alert(`Your contact list:\n${contactList}`);
+        }
+    },
+
+    deleteContact: function(userName,phoneNumber){
+
+        return this.contact.splice(userName,phoneNumber,2)
+    },
+
+    searchContact: function(userName){
 
     },
-    searchContact: function(input){
 
-    },
-    exit: function(input){
+    exist: function(){
 
-    },
+    }
 }
+
 
 
 const userInput = (input) => {
@@ -83,7 +102,13 @@ const userInput = (input) => {
                             alert("Contacts are succesfully added")
                     }
                 }
-            }
+
+    if(input === 2){
+            
+        contactManager.viewContacts();
+    }
+
+}
         
 
     
@@ -98,7 +123,7 @@ const value = prompt("Enter your choice:\n1. Add Contact\n2. View All Contacts\n
 
 if (value === null || value.trim() === ""){
     console.log("Exiting out of system");
-
+    break;
 }else{
     let input = Number(value);
     userInput(input);
@@ -108,6 +133,5 @@ if (value === null || value.trim() === ""){
         break;
     }
 }
-
 
 }
