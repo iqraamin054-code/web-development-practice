@@ -82,7 +82,7 @@ const userInput = (input) => {
 
         // !phoneNumber check for both null and empty string
 
-            if(!phoneNumber){
+            if(phoneNumber === null || phoneNumber.trim() === ""){
                 return alert("You did not enter anything");
                                
             }else if (isNaN(phoneNumber)) {
@@ -128,7 +128,7 @@ const userInput = (input) => {
        let contactList = showInfo(contactManager.contacts);
         let value = prompt(`${contactList}\nEnter the number of the task you want to remove:`);
 
-        if(!value){
+        if(value === null || value.trim() === ""){
 
            return alert("You did not enter anything");
 
@@ -167,7 +167,44 @@ const userInput = (input) => {
             }
         }
 
+        if (input === 4){
+
+            if(contactManager.contacts.length === 0){
+
+                alert("No contact available");
+                return;
+
+            }
+
+            let searchInfo = prompt("Enter the name");
+
+            if(searchInfo === null || searchInfo.trim() === ""){
+
+                return alert("You did not enter anything");
+
+            }else if (!isNaN(searchInfo)) {
+
+                return alert("Invalid input: number cannot be used as name ");
+                
+            }else{
+
+            let counter = 1;
+            let contactList = "";
+            for(let info of contactManager.contacts){
+
+                if(searchInfo === info.userName){
+
+                contactList += `${counter}. ${info.userName}-${info.phoneNumber}\n`;
+                counter ++;
+                }
+            }
+            
+            return alert(contactList);
+        } 
+    }
+
 }
+
         
 
     
