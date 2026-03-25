@@ -1,5 +1,22 @@
 // Contact Manager Project
 
+
+const showInfo = (contacts) => {
+
+            let counter = 1;
+            let contactList = "";
+            for(let info of contacts){
+
+                contactList += `${counter}. ${info.userName}-${info.phoneNumber}\n`;
+                
+                counter ++;
+            }
+
+           return contactList;
+
+        }
+        
+
 const contactManager = {
     contacts: [],
 
@@ -11,27 +28,18 @@ const contactManager = {
 
     viewContacts: function(){
 
-        if(this.contacts.length === 0){
-            alert("No contact available"); 
+         if (this.contacts.length === 0){
+            alert ("No contact available.");
 
         }else{
-
-            let counter = 1;
-            let contactList = "";
-            for(let info of this.contacts){
-
-                contactList += `${counter}. ${info.userName}-${info.phoneNumber}\n`;
-                
-                counter ++;
-            }
-
-            alert(`Your contact list:\n${contactList}`);
-        }
+            let contactList = showInfo(this.contacts);
+            alert(`Your Tasks:\n ${contactList}`);
+        }    
     },
 
-    deleteContact: function(userName,phoneNumber){
+    deleteContact: function(input){
 
-        return this.contact.splice(userName,phoneNumber,2)
+        return this.contacts.splice(input,1);
     },
 
     searchContact: function(userName){
@@ -40,6 +48,8 @@ const contactManager = {
 
     exist: function(){
 
+        
+        
     }
 }
 
@@ -75,15 +85,13 @@ const userInput = (input) => {
             if(!phoneNumber){
                 return alert("You did not enter anything");
                                
-            }
+            }else if (isNaN(phoneNumber)) {
 
-                if (isNaN(phoneNumber)) {
-
-                    return alert("Error: letter cannot be used in phone number");
+                return alert("Error: letter cannot be used in phone number");
       
-                }else if (phoneNumber.length !== 10) {
+            }else if (phoneNumber.length !== 10) {
 
-                    return alert("Error: phone number length must be 10");
+                 return alert("Error: phone number length must be 10");
 
                 }
 
@@ -98,8 +106,8 @@ const userInput = (input) => {
                     let message = confirm("Do you want to add this name and phone number");
                 
                     if (message){
-                            contactManager.addContact(userName,userPhoneNumber);
-                            alert("Contacts are succesfully added")
+                        contactManager.addContact(userName,userPhoneNumber);
+                        alert("Contacts are succesfully added");
                     }
                 }
 
@@ -107,6 +115,57 @@ const userInput = (input) => {
             
         contactManager.viewContacts();
     }
+
+    if(input === 3){
+
+        if(contactManager.contacts.length === 0){
+
+            alert("No contact available");
+            return;
+
+        }
+
+       let contactList = showInfo(contactManager.contacts);
+        let value = prompt(`${contactList}\nEnter the number of the task you want to remove:`);
+
+        if(!value){
+
+           return alert("You did not enter anything");
+
+        }
+          
+        let removeContact = Number(value);
+
+        if(isNaN(removeContact)){
+
+            return alert("Invalid Input");
+
+        }else if (!Number.isInteger(removeContact)) {
+
+            return alert("Error: number must be in integer (not decimal)");
+            
+        } else if (removeContact < 1 || removeContact > contactManager.contacts.length) {
+
+            alert("Error: That task number doesn't exist in your list."); 
+            
+        }else{
+
+            let index = removeContact - 1;
+
+             let message = confirm("Do you want to remove this contact");
+                
+                if (message){
+
+                    contactManager.deleteContact(index);
+                    return alert("Contacts are succesfully removed");
+
+                }else{
+
+                    alert("deletion is cancelled");
+
+                }
+            }
+        }
 
 }
         
