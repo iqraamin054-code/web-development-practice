@@ -32,6 +32,7 @@ const contactManager = {
             alert ("No contact available.");
 
         }else{
+
             let contactList = showInfo(this.contacts);
             alert(`Your Tasks:\n ${contactList}`);
         }    
@@ -196,6 +197,7 @@ const userInput = (input) => {
 
                 contactList += `${counter}. ${info.userName}-${info.phoneNumber}\n`;
                 counter ++;
+
                 }
             }
             
@@ -203,26 +205,40 @@ const userInput = (input) => {
         } 
     }
 
+    if(input === 5){
+
+        contactManager.exist();
+        return "Exit";
+
+    }
+
 }
 
         
 
-    
-    
-
-
-
-
 while(true){
 
-const value = prompt("Enter your choice:\n1. Add Contact\n2. View All Contacts\n3. Delete Contact\n4. Search Contact\n5. Exit");
+    let contactList = showInfo(contactManager.contacts);
+
+
+    let updatedList = contactManager.contacts.length === 0? "No task available":`Your Tasks:\n ${contactList}`;
+
+    let showOptions = `\nEnter your choice:\n1. Add Contact\n2. View All Contacts\n3. Delete Contact\n4. Search Contact\n5. Exit`
+
+const value = prompt(updatedList + showOptions);
 
 if (value === null || value.trim() === ""){
     console.log("Exiting out of system");
     break;
 }else{
     let input = Number(value);
-    userInput(input);
+
+    let result = userInput(input);
+
+    if (result === "Exit") {
+        console.log("Exiting out of system");
+        break;
+    }
 
     let userRequest = confirm("Do you want to continue?");
     if(userRequest === false){
