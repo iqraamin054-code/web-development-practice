@@ -34,7 +34,7 @@ const contactManager = {
         }else{
 
             let contactList = showInfo(this.contacts);
-            alert(`Your Tasks:\n ${contactList}`);
+            alert(`Your Contacts:\n ${contactList}`);
         }    
     },
 
@@ -47,7 +47,7 @@ const contactManager = {
 
     },
 
-    exist: function(){
+    exit: function(){
 
         
         
@@ -108,7 +108,7 @@ const userInput = (input) => {
                 
                     if (message){
                         contactManager.addContact(userName,userPhoneNumber);
-                        alert("Contacts are succesfully added");
+                        alert("Contact added successfully");
                     }
                 }
 
@@ -207,7 +207,7 @@ const userInput = (input) => {
 
     if(input === 5){
 
-        contactManager.exist();
+        contactManager.exit();
         return "Exit";
 
     }
@@ -246,4 +246,4 @@ if (value === null || value.trim() === ""){
     }
 }
 
-}
+} 
