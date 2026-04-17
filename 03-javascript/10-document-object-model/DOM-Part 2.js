@@ -10,15 +10,16 @@ heading.textContent = "Hello World! ";
 
 // Task 2: Select one element and change its background color.
 
-const heading1 = document.querySelector("section h1");
-heading1.style.backgroundColor = "gold";
+heading.style.backgroundColor = "gold";
 
 // Task 3: Select multiple elements and change their text color using a loop.
 
+
 const views = document.querySelectorAll(".view");
-for(let i = 0; i < views.length; i++ ){
-    views[i].style.color = "purple";
-}
+
+views.forEach((view) => {
+    view.style.color = "purple";
+});
 
 
 // Task 4: Select an element and change its innerHTML by adding some HTML inside it.
