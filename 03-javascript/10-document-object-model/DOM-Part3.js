@@ -45,14 +45,14 @@ h2.addEventListener("dblclick", (event) => {
 // Task 5: Add a mouseover event to an element and change its color.
 
 h2.addEventListener("mouseover", (event) => {
-    h2.style.color = "red";
+    event.target.style.color = "red";
 });
 
 
 // Task 6: Add a mouseout event to the same element and reset the color.
 
 h2.addEventListener("mouseout", (event) => {
-    h2.style.color = "purple";
+    event.target.style.color = "purple";
 });
 
 
