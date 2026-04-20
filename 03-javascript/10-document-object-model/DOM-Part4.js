@@ -35,7 +35,7 @@ view2.remove();
 const newElement = document.createElement("h1");
 newElement.textContent = "This is the new heading!";
 
-const oldElement = document.querySelector("h1");
+const oldElement = document.querySelector("#view1 h1");
 oldElement.replaceWith(newElement);
 
 
@@ -55,9 +55,16 @@ oldElement.replaceWith(newElement);
     addBtn.addEventListener("click", (event) => {
 
         event.preventDefault();
-        userInput = myInput.value.trim();
+        let userInput = myInput.value.trim();
+
+        if(userInput === ""){
+            alert("You did not enter anything");
+            return;
+        }
         const newElement = document.createElement("p");
         newElement.textContent = userInput;
         view.append(newElement);
 
-    })
+        myInput.value = "";
+
+    });
